@@ -186,11 +186,12 @@ class BYTETracker(object):
         xyxys = dets[:, 0:4]
         xywh = xyxy2xywh(xyxys)
         confs = dets[:, 4]
-        clss = dets[:, 5]
+        classes = dets[:, 5]
 
-        classes = clss.numpy()
-        xyxys = xyxys.numpy()
-        confs = confs.numpy()
+        # oazizi: Removed. Perhaps the tracker assumed tensorflow dets?
+        # classes = clss.numpy()
+        # xyxys = xyxys.numpy()
+        # confs = confs.numpy()
 
         remain_inds = confs > self.track_thresh
         inds_low = confs > 0.1
