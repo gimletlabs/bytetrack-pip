@@ -24,9 +24,9 @@ def get_version():
 
 
 setuptools.setup(
-    name="bytetracker",
+    name="bytetracker-gml",
     version=get_version(),
-    author="kadirnar",
+    author="Gimlet Labs",
     license="MIT",
     description="Packaged version of the ByteTrack repository",
     long_description=get_long_description(),
